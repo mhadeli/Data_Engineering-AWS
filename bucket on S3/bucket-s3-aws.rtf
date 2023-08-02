@@ -1,0 +1,60 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 Monaco;\f2\fnil\fcharset0 HelveticaNeue-Medium;
+}
+{\colortbl;\red255\green255\blue255;\red42\green49\blue64;\red245\green245\blue246;\red24\green24\blue24;
+\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c21569\c25490\c31765;\cssrgb\c96863\c96863\c97255;\cssrgb\c12157\c12157\c12157;
+\cssrgb\c100000\c100000\c100000;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid101\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sa400\partightenfactor0
+
+\f0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 An Amazon S3 bucket is a public cloud storage resource available in Amazon Web Services' (AWS) Simple Storage Service (S3). A bucket is analogous to a directory/folder at the top level of the storage.\
+You can think of S3 as a flat file structure, where instead of having folders containing files, you have buckets containing objects. Each object is a file and optionally any metadata that describes that file.\
+Buckets are used to store object data (such as files, images, videos, etc.), and they serve as a container for these objects. Each object within a bucket is identified by a unique, user-assigned key.\
+Here are some key properties of S3 buckets:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Each AWS account can create up to 100 buckets by default. You can request an increase in the limit from AWS if needed.\cb1 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Buckets can be configured individually, allowing for fine-tuned control over data access, object lifecycle management, logging, cross-region replication, and transfer acceleration.\cb1 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 S3 bucket names are globally unique across all AWS accounts. That means the bucket name you choose must not already be taken by someone else.\cb1 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 When you create a bucket, you need to choose an AWS region where the bucket and its content will reside. It's generally a good idea to choose a region closest to where your application server is hosted for faster data access.\cb1 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 You can store an unlimited amount of data in a bucket, and each individual object can be as large as 5 terabytes.\cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 Remember that while buckets themselves don't have any inherent hierarchy, you can create a logical hierarchy by using object key name prefixes that resemble a file path. For example, 
+\f1\fs28 my-bucket/photos/2023/jan/image01.jpg
+\f0\fs32  creates the illusion of folders by using 
+\f1\fs28 /
+\f0\fs32  in the object key.\
+\
+\
+\pard\pardeftab720\sa480\partightenfactor0
+\cf4 \cb5 \strokec4 Here are the steps on how to create an Amazon S3 bucket:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa200\partightenfactor0
+\ls2\ilvl0\cf4 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	1	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 Go to the Amazon S3 console: https://s3.console.aws.amazon.com/.\cb1 \
+\ls2\ilvl0\cb5 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	2	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 Click the\'a0
+\f2 Create Bucket
+\f0 \'a0button.\cb1 \
+\ls2\ilvl0\cb5 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	3	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 In the\'a0
+\f2 Bucket Name
+\f0 \'a0field, enter a unique name for your bucket.\cb1 \
+\ls2\ilvl0\cb5 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	4	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 In the\'a0
+\f2 Region
+\f0 \'a0field, select the region where you want your bucket to be located.\cb1 \
+\ls2\ilvl0\cb5 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	5	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 Click the\'a0
+\f2 Create
+\f0 \'a0button.\cf2 \cb3 \strokec2 \
+}
