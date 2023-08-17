@@ -31,11 +31,8 @@ def create_tables(cur, conn):
 def main():
     """
     - Establishes connection with the Sparkify database and gets cursor to it.
-
     - Drops all the tables.
-
     - Creates all tables needed.
-
     - Finally, closes the connection.
     """
     # Read database connection params
@@ -55,7 +52,6 @@ def main():
 
     # Close database connection
     conn.close()
-
 
 if __name__ == "__main__":
     main()
